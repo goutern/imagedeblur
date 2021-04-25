@@ -1,4 +1,4 @@
-# Comic Book Sales Predictor
+# Deblured image quality assesment
 By: Nicholas Goutermout, Carley Reardon, Sidd Shanmugam
 
 # Introduction
