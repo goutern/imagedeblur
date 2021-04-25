@@ -12,9 +12,15 @@ If you wish to deblur using deep learning methods you will need to install the f
 - GAN  https://github.com/VITA-Group/DeblurGANv2
 - Gated Fusion Network (GFN) https://github.com/jacquelinelala/GFN
 
-Next feel free to run any of the debluring scripts or machine learning methods. 
+Our debluring scripts for machine learning (non-DL) methods can be found in the following files: 
 - [wiener_deconv.ipynb](https://github.com/goutern/imagedeblur/blob/main/wiener_deconv.ipynb "wiener_deconv.ipynb")
 - [out_of_focus.ipynb](https://github.com/goutern/imagedeblur/pull/4/files#diff-74339cc3dffc4cc4e2e1571d8e8fa75082890e420c6191b5a4307fcfc81bb703 "out_of_focus.ipynb")
+
+For these methods, we used the Wiener Deconvolution method, which is a mathematical technique that aims to minimize noise in blurred images due to poor signal-to-noise ratio. You can read more about this method on this Wikipedia page: https://en.wikipedia.org/wiki/Wiener_deconvolution For the image deblurring application, we used two approaches:
+- Wiener Deconvolution with motion-based point-spread function to represent the images' impulse response (used in [wiener_deconv.ipynb](https://github.com/goutern/imagedeblur/blob/main/wiener_deconv.ipynb "wiener_deconv.ipynb"))
+- Wiener Deconvolution with out-of-focus point-spread function to represent the images' impulse response (used in [out_of_focus.ipynb](https://github.com/goutern/imagedeblur/pull/4/files#diff-74339cc3dffc4cc4e2e1571d8e8fa75082890e420c6191b5a4307fcfc81bb703 "out_of_focus.ipynb"))
+
+In our specific problem, the motion-based application tended to work better due to our video being of objects moving on a conveyor belt. However, the success of these methods will depend on the problem.
 
 In our runs we changed the machine learning scripts to output to custom fram directorys for our measument scripts to read. For example the for GAN we output to gan_frames. 
 
@@ -23,7 +29,7 @@ Once you have sperated the video frames and generated the required deblured fram
 
 ## Scripts
 
-There are three measuments scripts though after expirimentation we found only two of these methods to be useful. The traditional PSNR and SSIM do not work for this case because we do not have unblured baseline data to reference as a ground truth. 
+There are three measuments scripts though after expirimentation we found only two of these methods to be useful. The traditional PSNR and SSIM do not work for this case because we do not have unblurred baseline data to reference as a ground truth. 
 We instead use two no-reference "blind" image measurment techiques BRISQUE and NIQE.
 
 To measure using BRISQUE adjust [brisque.ipynb](https://github.com/goutern/imagedeblur/blob/main/brisque.ipynb "brisque.ipynb") to reference your deblured images. Please note if you have a lot of images this may take a long time and use a lot of memory.
