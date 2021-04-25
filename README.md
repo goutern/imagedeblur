@@ -1,4 +1,4 @@
-# Deblured image quality assesment
+# Deblured Image Quality Assesment
 By: Nicholas Goutermout, Carley Reardon, Sidd Shanmugam
 
 # Introduction
