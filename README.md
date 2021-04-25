@@ -18,17 +18,17 @@ Next feel free to run any of the debluring scripts or machine learning methods.
 
 In our runs we changed the machine learning scripts to output to custom fram directorys for our measument scripts to read. For example the for GAN we output to gan_frames. 
 
-Once you have sperated the video frames and generated the required deblured frames we can use the measument sscripts to compare the results. 
+Once you have sperated the video frames and generated the required deblured frames we can use the measument scripts to compare the results. 
 
 
 ## Scripts
 
-There are three measuments scripts though after expirimentation we found only two of these methods to be useful. The traditional PSNR and SSIM do not work for this case because we do not have an unblured base line. 
-We instead use two no reference image measurment techiques BRISQUE and NIQE.
+There are three measuments scripts though after expirimentation we found only two of these methods to be useful. The traditional PSNR and SSIM do not work for this case because we do not have unblured baseline data to reference as a ground truth. 
+We instead use two no-reference "blind" image measurment techiques BRISQUE and NIQE.
 
-To measure using BRISQUE adjust [brisque.ipynb](https://github.com/goutern/imagedeblur/blob/main/brisque.ipynb "brisque.ipynb") to reference your deblured images. Please note if ytou have a lot of images this may take a long time and use a lot of memory.
+To measure using BRISQUE adjust [brisque.ipynb](https://github.com/goutern/imagedeblur/blob/main/brisque.ipynb "brisque.ipynb") to reference your deblured images. Please note if you have a lot of images this may take a long time and use a lot of memory.
 
-To measure using NIQE adjust [deblur_metrics.ipynb](https://github.com/goutern/imagedeblur/blob/main/deblur_metrics.ipynb "deblur_metrics.ipynb") to reference your deblured images. Please note if ytou have a lot of images this may take a long time and use a lot of memory.
+To measure using NIQE adjust [deblur_metrics.ipynb](https://github.com/goutern/imagedeblur/blob/main/deblur_metrics.ipynb "deblur_metrics.ipynb") to reference your deblured images. Please note if you have a lot of images this may take a long time and use a lot of memory.
 
 
 
