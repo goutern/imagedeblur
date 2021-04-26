@@ -32,13 +32,13 @@ Once you have sperated the video frames and generated the required deblured fram
 There are three measuments scripts though after expirimentation we found only two of these methods to be useful. The traditional PSNR and SSIM do not work for this case because we do not have unblurred baseline data to reference as a ground truth. 
 We instead use two no-reference "blind" image measurment techiques BRISQUE and NIQE.
 
-BRISQUE a.k.a the “Blind/Referenceless Image Spatial Quality Evaluator” works from the assumption that distorted images pixel intensities follow a Gaussian distribution. This metrics normalizes the image using Mean Substracted Contrast Normalization (MSCN), and creates subimages to compare using Generalized Gaussian Distribution (GGD) and Asymmetric Generalized Gaussian Distribution (AGGD) to create feature vectors. Then an SVM is used to predict the quality score of the image. Further explanation on BRISQUE can be found in [1]. 
+BRISQUE a.k.a the “Blind/Referenceless Image Spatial Quality Evaluator” works from the assumption that distorted images pixel intensities follow a Gaussian distribution. This metrics normalizes the image using Mean Subtracted Contrast Normalization (MSCN), and creates subimages to compare using Generalized Gaussian Distribution (GGD) and Asymmetric Generalized Gaussian Distribution (AGGD) to create feature vectors. Then an SVM is used to predict the quality score of the image. Further explanation on BRISQUE can be found in [1]. 
 
 To measure using BRISQUE adjust [brisque.ipynb](https://github.com/goutern/imagedeblur/blob/main/brisque.ipynb "brisque.ipynb") to reference your deblured images. Please note if you have a lot of images this may take a long time and use a lot of memory.
 
 NIQE a.k.a the “Natural Image Quality Evaluator” is an IQA that is no-reference, opinion-unaware, and distortion-unaware. This metric determines the quality of an image by measuring the distance between a multivariate gaussian (MVG) model based on the natural scene statistic (NSS) features of the image, to the MVG based on “quality aware” features that were previously extracted from a corpus of natural images. NIQE strives to be distortion-unaware by extracting features only from natural images (not intentionally distorted ones), so the model is not limited to a specific set of distortion types. Further explanation on NIQE can be found in [2]. 
 
-To measure using NIQE adjust [deblur_metrics.ipynb](https://github.com/goutern/imagedeblur/blob/main/deblur_metrics.ipynb "deblur_metrics.ipynb") to reference your deblured images. Please note if you have a lot of images this may take a long time and use a lot of memory.
+To measure using NIQE adjust [niqe.ipynb](https://github.com/goutern/imagedeblur/blob/main/niqe.ipynb "niqe.ipynb") to reference your deblured images. Please note if you have a lot of images this may take a long time and use a lot of memory.
 
 
 
