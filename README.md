@@ -4,7 +4,7 @@ By: Nicholas Goutermout, Carley Reardon, Sidd Shanmugam
 # Introduction
 This is a project that compare four image debluring methods and measure how effective they are at debluring video frames. 
 
-# Quick Start
+## Deblurring Scripts
 After ensuring you have the correct python dependencies.
 The scripts work from a folder "frames" in the working directory. 
 If you want to just deblur frames you can place them in the frames directory. Otherwise if you wish to deblur frames from a video you will need to run the frameSeparator.ipynb on your video. 
@@ -27,7 +27,7 @@ In our runs we changed the machine learning scripts to output to custom fram dir
 Once you have sperated the video frames and generated the required deblured frames we can use the measument scripts to compare the results. 
 
 
-## Scripts
+## Image Quality Evaluation Scripts
 
 There are three measuments scripts though after expirimentation we found only two of these methods to be useful. The traditional PSNR and SSIM do not work for this case because we do not have unblurred baseline data to reference as a ground truth. 
 We instead use two no-reference "blind" image measurment techiques BRISQUE and NIQE.
