@@ -46,11 +46,11 @@ To measure using NIQE adjust [niqe.ipynb](https://github.com/goutern/imagedeblur
 ![RESULTS](/results/zoomed_in_results.jpg?raw=true)
 
 We have also included sample results for each method located in:
-- Original Frames: [results/original]
-- GFN: [results/gfn]
-- GAN: [results/gan]
-- Motion: [results/motion]
-- Out of focus: [results/out-of-focus]
+- Original Frames: results/original
+- GFN: results/gfn
+- GAN: results/gan
+- Motion: results/motion
+- Out of focus: results/out-of-focus
 
 
 
