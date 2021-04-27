@@ -1,7 +1,7 @@
 # Deblured Image Quality Assesment
 By: Nicholas Goutermout, Carley Reardon, Sidd Shanmugam
 
-# Introduction
+## Introduction
 This is a project that compare four image debluring methods and measure how effective they are at debluring video frames. 
 
 ## Deblurring Scripts
