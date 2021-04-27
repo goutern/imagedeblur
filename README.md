@@ -43,6 +43,7 @@ To measure using NIQE adjust [niqe.ipynb](https://github.com/goutern/imagedeblur
 ## Results
 ![BRISQUE](/results/BRISQUE.jpg?raw=true)
 ![NIQE](/results/NIQE.jpg?raw=true)
+![RESULTS](/results/zoomed_in_results.jpg?raw=true)
 
 
 
