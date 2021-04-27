@@ -1,8 +1,8 @@
-# Deblured Image Quality Assesment
+# Deblurred Image Quality Assesment
 By: Nicholas Goutermout, Carley Reardon, Sidd Shanmugam
 
 ## Introduction
-This is a project that compare four image debluring methods and measure how effective they are at debluring video frames. 
+This is a project that compare four image deblurring methods and measure how effective they are at deblurring video frames. 
 
 ## Deblurring Scripts
 After ensuring you have the correct python dependencies.
@@ -12,7 +12,7 @@ If you wish to deblur using deep learning methods you will need to install the f
 - GAN  https://github.com/VITA-Group/DeblurGANv2
 - Gated Fusion Network (GFN) https://github.com/jacquelinelala/GFN
 
-Our debluring scripts for machine learning (non-DL) methods can be found in the following files: 
+Our deblurring scripts for machine learning (non-DL) methods can be found in the following files: 
 - [wiener_deconv.ipynb](https://github.com/goutern/imagedeblur/blob/main/wiener_deconv.ipynb "wiener_deconv.ipynb")
 - [out_of_focus.ipynb](https://github.com/goutern/imagedeblur/pull/4/files#diff-74339cc3dffc4cc4e2e1571d8e8fa75082890e420c6191b5a4307fcfc81bb703 "out_of_focus.ipynb")
 
@@ -24,7 +24,7 @@ In our specific problem, the motion-based application tended to work better due 
 
 In our runs we changed the machine learning scripts to output to custom fram directorys for our measument scripts to read. For example the for GAN we output to gan_frames. 
 
-Once you have sperated the video frames and generated the required deblured frames we can use the measument scripts to compare the results. 
+Once you have sperated the video frames and generated the required deblurred frames we can use the measument scripts to compare the results. 
 
 
 ## Image Quality Evaluation Scripts
@@ -34,11 +34,11 @@ We instead use two no-reference "blind" image measurment techiques BRISQUE and N
 
 BRISQUE a.k.a the “Blind/Referenceless Image Spatial Quality Evaluator” works from the assumption that distorted images pixel intensities follow a Gaussian distribution. This metrics normalizes the image using Mean Subtracted Contrast Normalization (MSCN), and creates subimages to compare using Generalized Gaussian Distribution (GGD) and Asymmetric Generalized Gaussian Distribution (AGGD) to create feature vectors. Then an SVM is used to predict the quality score of the image. Further explanation on BRISQUE can be found in [1]. 
 
-To measure using BRISQUE adjust [brisque.ipynb](https://github.com/goutern/imagedeblur/blob/main/brisque.ipynb "brisque.ipynb") to reference your deblured images. Please note if you have a lot of images this may take a long time and use a lot of memory.
+To measure using BRISQUE adjust [brisque.ipynb](https://github.com/goutern/imagedeblur/blob/main/brisque.ipynb "brisque.ipynb") to reference your deblurred images. Please note if you have a lot of images this may take a long time and use a lot of memory.
 
 NIQE a.k.a the “Natural Image Quality Evaluator” is an IQA that is no-reference, opinion-unaware, and distortion-unaware. This metric determines the quality of an image by measuring the distance between a multivariate gaussian (MVG) model based on the natural scene statistic (NSS) features of the image, to the MVG based on “quality aware” features that were previously extracted from a corpus of natural images. NIQE strives to be distortion-unaware by extracting features only from natural images (not intentionally distorted ones), so the model is not limited to a specific set of distortion types. Further explanation on NIQE can be found in [2]. 
 
-To measure using NIQE adjust [niqe.ipynb](https://github.com/goutern/imagedeblur/blob/main/niqe.ipynb "niqe.ipynb") to reference your deblured images. Please note if you have a lot of images this may take a long time and use a lot of memory.
+To measure using NIQE adjust [niqe.ipynb](https://github.com/goutern/imagedeblur/blob/main/niqe.ipynb "niqe.ipynb") to reference your deblurred images. Please note if you have a lot of images this may take a long time and use a lot of memory.
 
 ## Results
 ![BRISQUE](/results/BRISQUE.jpg?raw=true)
