@@ -40,6 +40,10 @@ NIQE a.k.a the “Natural Image Quality Evaluator” is an IQA that is no-refere
 
 To measure using NIQE adjust [niqe.ipynb](https://github.com/goutern/imagedeblur/blob/main/niqe.ipynb "niqe.ipynb") to reference your deblured images. Please note if you have a lot of images this may take a long time and use a lot of memory.
 
+## Results
+![BRISQUE](/results/BRISQUE.jpg?raw=true)
+![NIQE](/results/NIQE.jpg?raw=true)
+
 
 
 ## Python Dependencies
